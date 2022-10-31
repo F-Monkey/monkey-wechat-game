@@ -3,9 +3,14 @@
     "pages/index/index",
     "pages/main/main",
     "pages/logs/logs",
-    "pages/account/account"
+    "pages/account/account",
+    "pages/games/map/map",
+    "pages/games/cosPlay/cosPlay"
   ],
-  "requireBackgroundModes": ["audio","location"],
+  "requireBackgroundModes": [
+    "audio",
+    "location"
+  ],
   "tabBar": {
     "selectedColor": "#ff2c4a",
     "list": [

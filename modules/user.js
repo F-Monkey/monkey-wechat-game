@@ -2,6 +2,7 @@ const user_p = require("../protobuf/User_pb")
 const cmd_p = require("../protobuf/Cmd_pb")
 import { SYS_ACCOUNT, post } from "../utils/http"
 import { OK } from "../data/vo"
+import {Session} from "../data/dto"
 
 class SignIn extends Object {
   constructor() {
@@ -38,13 +39,8 @@ class SignIn extends Object {
         wx.showToast({ title: resultMsg.getMsg(), icon: 'none', duration: 2000 });
         return;
       }
-      const proto_userInfo = user_p.UserInfo.deserializeBinary(pkg.getContent());
-      const userInfo = {
-        uid: proto_userInfo.getUid(),
-        username: proto_userInfo.getUsername(),
-        head: proto_userInfo.getHead()
-      }
-      wx.setStorageSync("user", userInfo);
+      const session = user_p.Session.deserializeBinary(pkg.getContent());
+      wx.setStorageSync("user", new Session(session));
       wx.switchTab({
         url:"../main/main",
         fail: function(e){

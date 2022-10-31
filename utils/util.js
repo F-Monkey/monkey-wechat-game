@@ -14,6 +14,16 @@ const formatNumber = n => {
   return n[1] ? n : `0${n}`
 }
 
+const createMediaPlay = source => {
+  const innerAudioContext = wx.createInnerAudioContext();
+  innerAudioContext.src = source;
+  innerAudioContext.onEnded(() => {
+    innerAudioContext.play();
+  })
+  return innerAudioContext;
+}
+
 module.exports = {
-  formatTime
+  formatTime,
+  createMediaPlay
 }

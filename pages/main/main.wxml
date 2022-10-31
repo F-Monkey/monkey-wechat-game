@@ -1,5 +1,14 @@
 <!--main.wxml-->
 <view class="page" style="margin-bottom:1%;">
-  <image class="main-background" src="../../resources/imgs/main-background.png"/>
+  <image class="main-background" src="../../resources/imgs/main-background.png" />
   <settings />
+  <view class="page-section">
+    <view class="flex-wrp" style="flex-direction:column;">
+      <navigator  wx:for="{{center_btns}}" wx:for-item="item" wx:key="id" url="{{item.url}}">
+        <view data-index= "{{index}}" class="flex-item flex-item-V {{item.isHover?'center_btn_1':'center_btn_2'}}">
+        {{item.text}}
+        </view>
+      </navigator>
+    </view>
+  </view>
 </view>

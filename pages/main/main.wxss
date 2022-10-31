@@ -11,3 +11,57 @@
   height: 100%;
   z-index: -999;
 }
+
+page, view, text, image, button, video, map, scroll-view, swiper, input, textarea, navigator {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: stretch;
+  box-sizing: border-box;
+  background-origin: border-box;
+}
+
+.flex-wrp{
+  margin-top: 30px;
+  display:flex;
+  width: 100vw;
+  align-items: center;
+}
+.flex-item{
+  width: 100px;
+  height: 150px;
+  font-size: 13px;
+}
+.flex-item-V{
+  /* skyline不支持auto，改为 align-items: center; */
+  /* margin: 0 auto; */
+  width: 150px;
+  height: 100px;
+}
+
+.center_btn_1 {
+  margin-top: 10%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 1000;
+  width: 160px;
+  height: 55px;
+  color: rgb(159, 66, 172);
+  background-color: rgb(12, 163, 63);
+  border-radius: 30px;
+  line-height: 45px;
+}
+
+.center_btn_2 {
+  margin-top: 10%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 1000;
+  height: 50px;
+  color: rgb(159, 66, 172);
+  background-color: rgb(12, 163, 63);
+  border-radius: 30px;
+  line-height: 45px;
+}
+
