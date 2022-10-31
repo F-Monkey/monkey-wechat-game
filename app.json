@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/main",
+    "pages/logs/logs",
+    "pages/account/account"
+  ],
+  "requireBackgroundModes": ["audio","location"],
+  "tabBar": {
+    "selectedColor": "#ff2c4a",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "main"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "text": "account"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Monkey Game",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

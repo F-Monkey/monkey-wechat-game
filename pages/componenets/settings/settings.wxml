@@ -1,0 +1,4 @@
+<!--pages/componenets/settings/settings.wxml-->
+<view style="float: right;">
+    <image class="setting" src="../../../resources/icons/setting.png" mode="widthFix"/>
+</view>

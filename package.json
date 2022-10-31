@@ -1,0 +1,15 @@
+{
+  "name": "monkey-wechat-game",
+  "version": "1.0.0",
+  "description": "wechat game",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "F-Monkey",
+  "license": "ISC",
+  "dependencies": {
+    "google-protobuf": "^3.21.2",
+    "protobufjs": "^7.1.2"
+  }
+}

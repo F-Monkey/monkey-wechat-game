@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "settings":"../componenets/settings/settings"
+  }
+}

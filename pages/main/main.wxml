@@ -1,0 +1,5 @@
+<!--main.wxml-->
+<view class="page" style="margin-bottom:1%;">
+  <image class="main-background" src="../../resources/imgs/main-background.png"/>
+  <settings />
+</view>

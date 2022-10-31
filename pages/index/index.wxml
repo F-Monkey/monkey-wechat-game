@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view style="width:max-content; height: max-content;">
+<image src="../../resources/imgs/background.png"/>
+</view>
