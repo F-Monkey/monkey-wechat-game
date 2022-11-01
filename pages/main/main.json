@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "settings":"../componenets/settings/settings"
+    "settings":"../componenets/settings/settings",
+    "messages":"../componenets/messages/messages"
   }
 }

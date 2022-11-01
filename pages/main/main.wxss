@@ -12,28 +12,25 @@
   z-index: -999;
 }
 
-page, view, text, image, button, video, map, scroll-view, swiper, input, textarea, navigator {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: flex-start;
-  align-items: stretch;
-  box-sizing: border-box;
-  background-origin: border-box;
+.icon {
+  width: 40px; 
+  height: 40px;
 }
 
-.flex-wrp{
+.flex-wrp {
   margin-top: 30px;
-  display:flex;
+  display: flex;
   width: 100vw;
   align-items: center;
 }
-.flex-item{
+
+.flex-item {
   width: 100px;
   height: 150px;
   font-size: 13px;
 }
-.flex-item-V{
+
+.flex-item-V {
   /* skyline不支持auto，改为 align-items: center; */
   /* margin: 0 auto; */
   width: 150px;
@@ -65,3 +62,6 @@ page, view, text, image, button, video, map, scroll-view, swiper, input, textare
   line-height: 45px;
 }
 
+.components {
+  float: right;
+}

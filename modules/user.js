@@ -44,7 +44,7 @@ class SignIn extends Object {
       wx.switchTab({
         url:"../main/main",
         fail: function(e){
-          console.error(e)
+          wx.showToast({ title: e, icon: 'none', duration: 2000 });
         }
       })
     }).catch(e => {

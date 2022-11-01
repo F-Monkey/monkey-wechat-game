@@ -1,7 +1,10 @@
 // pages/main/main.ts
-import {globalData} from "../../utils/global"
-import {createMediaPlay}  from "../../utils/util"
-import {Session} from "../../data/dto"
+import {
+  globalData
+} from "../../utils/global"
+import {
+  createMediaPlay
+} from "../../utils/util"
 
 Page({
 
@@ -16,11 +19,10 @@ Page({
     circular: true,
     main_circle: [],
     innerAudioContext: undefined,
-    center_btns: [
-      {
+    center_btns: [{
         "text": "剧本杀",
         "isHover": false,
-        "url":"/pages/games/cosPlay/cosPlay"
+        "url": "/pages/games/cosPlay/cosPlay"
       },
       {
         "isHover": false,
@@ -30,28 +32,14 @@ Page({
         "isHover": false,
         "text": "其他"
       }
-    ]
+    ],
+    lastComponent: undefined,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-    const session = wx.getStorageSync("user");
-    debugger;
-    const hallserver = session.hallServer;
-    console.info(hallserver);
-    const socket = wx.connectSocket({
-      url: hallserver,
-      success: res => {
-        console.info("socket: "+ hallserver + " connect success");
-      },
-      fail: error => {
-        console.error(error);
-        wx.showToast({ title: "网络链接失败", icon: 'none', duration: 4000 });
-      }
-    });
-    
   },
 
   /**
@@ -102,5 +90,15 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+  showRightBox(e) {
+    debugger;
+    if (this.data.lastComponent) {
+      this.data.lastComponent.hide();
+    }
+    console.info(e);
+    const component = this.data.lastComponent = this.selectComponent("#" + e.currentTarget.id);
+    component.show();
+  },
 })

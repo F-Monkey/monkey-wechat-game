@@ -1,31 +1,32 @@
-// pages/componenets/settings/settings.ts
+// pages/componenets/settings/settings.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    
+
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    options: [
-      {
-        name: "music",
-        enabled: true
-      }
-    ]
+    display: "none"
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    changeStatus: (e) => {
-        const target = e.target;
-        const code = target.dataset.code;
-    }
+    hide() {
+      this.setData({
+        display: "none"
+      })
+    },
+    show(){
+      this.setData({
+        display: "block"
+      })
+    },
   }
 })

@@ -13,7 +13,8 @@
 var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
-const proto = new Object();
+const proto = {};
+
 goog.exportSymbol('proto.Login', null, global);
 goog.exportSymbol('proto.Register', null, global);
 goog.exportSymbol('proto.Session', null, global);
