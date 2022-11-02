@@ -1,1 +1,2 @@
-export const globalData = {}
+export const globalData = {
+}

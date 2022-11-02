@@ -8,3 +8,27 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.weui-cells {
+  margin-top: 8px;
+  line-height: 1.41176471;
+  font-size: 17px;
+  overflow: hidden;
+  position: relative;
+  border-top: .5px solid rgba(0,0,0,0.1);
+  border-bottom: .5px solid rgba(0,0,0,0.1);
+}
+.weui-cells_after-title {
+  margin-top: 0;
+}
+
+.weui-cell_switch {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.weui-cell {
+  padding: 16px;
+  flex-direction: row;
+  align-items: center;
+}

@@ -1,4 +1,6 @@
 /* pages/componenets/settings/settings.wxss */
+@import "../../../app.wxss";
+
 .icon {
   width: 40px; 
   height: 40px;
@@ -8,8 +10,8 @@
   position: fixed;
   right: 0;
   top: 25%;
-  width: 40px;
-  height: 40px;
-  background-color: darkolivegreen;
   z-index: 10;
+  width: 30%;
+  background-color: darkkhaki;
+  border-radius: 10px 0px 0px 10px;
 }

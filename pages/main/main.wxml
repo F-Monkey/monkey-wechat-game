@@ -2,8 +2,8 @@
 <view class="page" style="margin-bottom:1%;">
   <image class="main-background" src="../../resources/imgs/main-background.png" />
   <view class="components">
-    <settings class="right-icon" id="settings" bindtap="showRightBox"/>
-    <messages class="right-icon" id="messages" bindtap="showRightBox"/>
+    <settings class="right-icon" id="settings"/>
+    <messages class="right-icon" id="messages"/>
   </view>
   <view class="page-section">
     <view class="flex-wrp" style="flex-direction:column;">

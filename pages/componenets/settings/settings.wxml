@@ -1,5 +1,10 @@
 <!--pages/componenets/settings/settings.wxml-->
 <view>
-    <image class="icon" src="../../../resources/icons/setting.png" />
-    <view class="right" style="display: {{display}};"/>
+  <image class="icon" bindtap="change" src="../../../resources/icons/setting.png" />
+  <view class="right" style="display: {{display}};">
+    <view style="flex-direction:row">
+      <view style="float: left; margin-right: 10%; margin-left: 5%; font-size: small; flex-direction:row">音乐:</view>
+      <switch checked bindchange="changeMusic" style="zoom: .6;"/>
+    </view>
+  </view>
 </view>

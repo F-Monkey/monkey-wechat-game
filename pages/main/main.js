@@ -39,8 +39,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad() {
-  },
+  onLoad() {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -92,13 +91,23 @@ Page({
 
   },
 
+
   showRightBox(e) {
-    debugger;
-    if (this.data.lastComponent) {
-      this.data.lastComponent.hide();
+    const component = this.selectComponent("#" + e.currentTarget.id);
+    if (!this.data.lastComponent) {
+      component.change();
+      this.data.lastComponent = component;
+      return;
     }
-    console.info(e);
-    const component = this.data.lastComponent = this.selectComponent("#" + e.currentTarget.id);
-    component.show();
+    const same = this.data.lastComponent == component;
+    if (same) {
+      component.change();
+    } else  {
+      if (this.data.lastComponent.isShow()){
+        this.data.lastComponent.change();
+      }
+      component.change();
+      this.data.lastComponent = component;
+    }
   },
 })

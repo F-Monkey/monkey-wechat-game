@@ -35,7 +35,7 @@ class HallChat {
     }
   }
 
-  send(msg){
-
+  send(content){
+    
   }
 }
