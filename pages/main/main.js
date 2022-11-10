@@ -5,6 +5,11 @@ import {
 import {
   createMediaPlay
 } from "../../utils/util"
+import {
+  HallChat,
+  cmdType
+} from "../../modules/chat"
+
 
 Page({
 
@@ -26,7 +31,8 @@ Page({
       },
       {
         "isHover": false,
-        "text": "小游戏"
+        "text": "地图拼图",
+        "url": "/pages/games/map/map"
       },
       {
         "isHover": false,
@@ -45,7 +51,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    this.initHallChat();
   },
 
   /**
@@ -91,23 +97,16 @@ Page({
 
   },
 
-
-  showRightBox(e) {
-    const component = this.selectComponent("#" + e.currentTarget.id);
-    if (!this.data.lastComponent) {
-      component.change();
-      this.data.lastComponent = component;
+  initHallChat() {
+    const session = wx.getStorageSync('session');
+    console.info(session);
+    if (!session.hallServer) {
       return;
     }
-    const same = this.data.lastComponent == component;
-    if (same) {
-      component.change();
-    } else  {
-      if (this.data.lastComponent.isShow()){
-        this.data.lastComponent.change();
-      }
-      component.change();
-      this.data.lastComponent = component;
-    }
+    const hallChat = new HallChat(session.hallServer);
+    const messageComponent = this.selectComponent("#messages");
+    const loginFunc = messageComponent.onLogin;
+    hallChat.addHandler(cmdType.LOGIN_RESULT, loginFunc);
+    hallChat.addHandler(cmdType.SHOW_USER_LIST_RESULT, messageComponent.onShowUserList);
   },
 })

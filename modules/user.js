@@ -40,7 +40,7 @@ class SignIn extends Object {
         return;
       }
       const session = user_p.Session.deserializeBinary(pkg.getContent());
-      wx.setStorageSync("user", new Session(session));
+      wx.setStorageSync("session", new Session(session));
       wx.switchTab({
         url:"../main/main",
         fail: function(e){
